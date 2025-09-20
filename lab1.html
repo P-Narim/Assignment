@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>동적 요소 추가 실습</title>
+</head>
+
+<body>
+    <h2>Dynamic Web page</h2>
+    <input type="text" id="fruitInput">
+    <button id="addBtn">추가</button>
+    <button id="delBtn">삭제</button>
+
+    <ul id="fruitList"></ul>
+    <script>
+
+    window.onload = () => {
+
+        const input = document.getElementById("fruitInput"); 
+        const addBtn = document.getElementById("addBtn");
+        const delBtn = document.getElementById("delBtn"); 
+        const list = document.getElementById("fruitList"); 
+
+        addBtn.addEventListener("click", () => {
+            const fruits = input.value.split(",");
+            fruits.forEach(fruit => {
+                const li = document.createElement("li"); 
+                li.textContent = fruit.trim(); 
+                list.appendChild(li); 
+        });
+    });
+
+    delBtn.addEventListener("click", () => {
+        list.innerHTML = "";});
+    };
+ </script>
+</body>
+
+</html>

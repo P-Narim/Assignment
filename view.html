@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품 상세보기</title>
+  <link rel="stylesheet" href="my.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .view-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+      align-items: flex-start;
+    }
+    .view-image {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+    .view-image img {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .view-details {
+      flex: 1 1 300px;
+    }
+    .view-details h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .discount {
+      color: red;
+      font-weight: bold;
+      margin-left: 6px;
+    }
+    .rating-box {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin: 12px 0;
+      font-size: 14px;
+      color: #007bff;
+    }
+    .rating-box img {
+      width: 18px;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    .tags {
+      margin: 10px 0;
+    }
+    .tag {
+      background-color: #eee;
+      color: #555;
+      padding: 2px 6px;
+      font-size: 12px;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+    .btn-box {
+      margin-top: 20px;
+    }
+    .btn-box button, .btn-box a {
+      margin-right: 10px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-edit {
+      background-color: #ffc107;
+      color: #000;
+    }
+    .btn-delete {
+      background-color: #dc3545;
+      color: #fff;
+    }
+    .btn-back {
+      background-color: #6c757d;
+      color: #fff;
+    }
+    .action-box {
+      margin-top: 20px;
+    }
+    .action-box select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+    }
+    .action-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .like {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 14px;
+    }
+    .like img {
+      width: 20px;
+      vertical-align: middle;
+    }
+    .btn-cart {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn-buy {
+      flex: 1;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-buy:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MUSINSA</h1>
+
+  <div class="view-container">
+    <div class="view-image">
+      <img src="img/엑스톤즈상세1.webp" alt="엑스톤즈 상세 이미지">
+    </div>
+
+    <div class="view-details">
+      <h2>XTK148 위켄드 라운드 반팔 니트 (NAVY)</h2>
+      <p><strong>브랜드:</strong> 엑스톤즈</p>
+      <p><span class="price">18,900원</span><span class="discount">(73% 할인)</span></p>
+
+      <div class="rating-box">
+        <span class="likes"><img src="img/heart.png" alt="좋아요"> 526</span>
+        <span class="stars"><img src="img/star_icon.png" alt="별점"> 5.0 (2)</span>
+      </div>
+
+      <div class="tags">
+        <span class="tag">단독</span>
+        <span class="tag">아울렛</span>
+      </div>
+
+      <div class="action-box">
+        <select>
+          <option>사이즈 선택</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+
+        <div class="action-buttons">
+          <button class="btn-cart">장바구니</button>
+          <button class="btn-buy">구매하기</button>
+        </div>
+
+         <div class="btn-box">
+        <a href="edit.html" class="btn-edit">[Edit]</a>
+        <button class="btn-delete" onclick="deleteConfirm()">[Delete]</button>
+        <a href="index.html" class="btn-back">[Back]</a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function deleteConfirm() {
+      if (confirm("게시물을 삭제할까요?")) {
+        alert("삭제되었습니다!");
+        window.location.href = "index.html";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+.horizontal-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-list li {
+  margin-right: 16px;
+}
+
+.horizontal-list li:first-child {
+  font-weight: bold;
+}
+
+.card1 img {
+  width: 100%;       
+  height: auto;    
+  border-radius: 4px;
+}
+
+.btn-add {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: #28a745;  
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.btn-add:hover {
+  background-color: #218838; 
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;              
+  justify-content: space-between; 
+  margin-top: 20px;
+}
+
+.card1 {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  width: 250px;
+  font-family: sans-serif;
+}
+
+.product-img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.badge {
+  background-color: #3f51b5;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  display: inline-block;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+.brand {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.pName {
+  font-size: 14px;
+  color: #333;
+}
+
+.price-box {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.discount {
+  color: red;
+  font-weight: bold;
+}
+
+.price {
+  font-weight: bold;
+  color: #000;
+}
+
+.rating-box {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  margin-top: 4px;
+  align-items: center;
+}
+
+.rating-box img {
+  width: 16px;
+  vertical-align: middle;
+}
+
+.tags {
+  margin-top: 6px;
+}
+
+.tag {
+  background-color: #eee;
+  color: #555;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
