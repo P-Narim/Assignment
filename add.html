@@ -96,6 +96,11 @@
       <input type="number" id="price" placeholder="50,000" required>
     </div>
 
+    <div class="mb-3">
+      <label>태그 *</label><br>
+      <input type="text" id="tags" placeholder="(ex) 단독, 아울렛" required>
+    </div>
+
     <button type="submit">[추가]</button>
     <a href="index.html">취소</a>
   </form>
@@ -109,6 +114,7 @@
       const pname = document.getElementById("pname").value.trim();
       const price = parseInt(document.getElementById("price").value);
       const discount = document.getElementById("discount").value;
+      const tags = document.getElementById("tags").value.trim();
 
       if (!image) {
         alert("상품 이미지를 반드시 첨부해야 합니다.");
@@ -131,7 +137,12 @@
       }
 
       if (discount !== "" && (discount < 0 || discount > 100)){
-        alert("할인율은 0 이상 100 미만만 가능합니다.");
+        alert("할인율은 0 이상 100 이하만 가능합니다.");
+        return;
+      }
+
+      if (!tags) {
+        alert("태그를 반드시 입력해주세요. (예: 단독, 아울렛)");
         return;
       }
 
